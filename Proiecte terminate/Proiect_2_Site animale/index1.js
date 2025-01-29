@@ -1,32 +1,21 @@
-const btn1EL = document.querySelector(".btn1");
-const btn2EL = document.querySelector(".btn2");
-const btn3EL = document.querySelector(".btn3");
-const btn4EL = document.querySelector(".btn4");
-const audio1EL = document.createElement("audio");
-const audio2EL = document.createElement("audio");
-const audio3EL = document.createElement("audio");
-const audio4EL = document.createElement("audio");
-audio1EL.src="audio/bird.wav";
-audio2EL.src="audio/cat.wav";
-audio3EL.src="audio/cow.wav";
-audio4EL.src="audio/dog.wav";
-btn1EL.appendChild(audio1EL);
-btn2EL.appendChild(audio2EL);
-btn3EL.appendChild(audio3EL);
-btn4EL.appendChild(audio4EL);
-btn1EL.addEventListener("click", ()=>{
-        audio1EL.play();
-    }
-)
-btn2EL.addEventListener("click", ()=>{
-    audio2EL.play();
+let buttons=new Array(4);
+let audio=new Array(4);
+let animals= new Array("bird", "cat", "cow", "dog");
+for(i=0; i<4; ++i){
+    buttons[i]=document.querySelector(`.btn${i}`);
+    audio[i]=document.createElement("audio");
+    audio[i].src=`audio/${animals[i]}.wav`;
+    buttons[i].appendChild(audio[i]);
 }
-)
-btn3EL.addEventListener("click", ()=>{
-    audio3EL.play();
-}
-)
-btn4EL.addEventListener("click", ()=>{
-    audio4EL.play();
-}
-)
+buttons[0].addEventListener("click", ()=>{
+    audio[0].play();
+});
+buttons[1].addEventListener("click", ()=>{
+    audio[1].play();
+});
+buttons[2].addEventListener("click", ()=>{
+    audio[2].play();
+});
+buttons[3].addEventListener("click", ()=>{
+    audio[3].play();
+});
