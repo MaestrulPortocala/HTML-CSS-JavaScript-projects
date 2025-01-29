@@ -32,15 +32,15 @@ button{
     margin:10px;
 }
 
-.btn1{
+.btn0{
     background-image: url("images/birde.jpg");
 }
-.btn2{
+.btn1{
     background-image: url("images/kitty.jpg");
 }
-.btn3{
+.btn2{
     background-image: url("images/cowy.jpg");
-}.btn4{
+}.btn3{
     background-image: url("images/doggy.jpg");
 }
 
